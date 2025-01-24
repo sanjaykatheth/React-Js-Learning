@@ -11,12 +11,15 @@ import "./App.css";
 function App() {
   // let foodItems = ["item1", "item2", "rice", "item 3"];
   let foodItems = [];
-  if (foodItems.length === 0) {
-    return <h1>i am still hungry</h1>;
-  }
+  // if (foodItems.length === 0) {
+  //   return <h1>i am still hungry</h1>;
+  // }
   return (
     <>
       <h1>Food Items</h1>
+      {/* conditional statement to show tital and also condition based programs
+       */}
+      {foodItems.length === 0 ? <h1>i am hungry</h1> : null}
       <ul className="list-group">
         {foodItems.map((item) => (
           <li key={item}>{item}</li> // Implicit return of <li>

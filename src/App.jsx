@@ -11,6 +11,7 @@ import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/FoodItems";
 
 function App() {
+  let foodItems = ["item1", "item2", "rice", "item 3"];
   return (
     <>
       <h1>Food Items</h1>

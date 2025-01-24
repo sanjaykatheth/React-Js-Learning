@@ -14,12 +14,19 @@ function App() {
   // if (foodItems.length === 0) {
   //   return <h1>i am still hungry</h1>;
   // }
+
+  // let emptyMessage = foodItems.length === 0 ? <h1>i am hungry</h1> : null;
   return (
     <>
       <h1>Food Items</h1>
       {/* conditional statement to show tital and also condition based programs
        */}
-      {foodItems.length === 0 ? <h1>i am hungry</h1> : null}
+      {/* {foodItems.length === 0 ? <h1>i am hungry</h1> : null} */}
+
+      {/* {emptyMessage} */}
+
+      {/* logical operator */}
+      {foodItems.length === 0 && <h1>i am now hungry</h1>}
       <ul className="list-group">
         {foodItems.map((item) => (
           <li key={item}>{item}</li> // Implicit return of <li>

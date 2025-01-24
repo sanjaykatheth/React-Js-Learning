@@ -7,31 +7,15 @@ import AddTodo from "./components/AddTodo";
 import TodoItem1 from "./components/TodoItem1";
 import TodoItem2 from "./components/TodoItem2";
 import "./App.css";
+import FoodItems from "./components/FoodItems";
+import ErrorMessage from "./components/FoodItems";
 
 function App() {
-  // let foodItems = ["item1", "item2", "rice", "item 3"];
-  let foodItems = [];
-  // if (foodItems.length === 0) {
-  //   return <h1>i am still hungry</h1>;
-  // }
-
-  // let emptyMessage = foodItems.length === 0 ? <h1>i am hungry</h1> : null;
   return (
     <>
       <h1>Food Items</h1>
-      {/* conditional statement to show tital and also condition based programs
-       */}
-      {/* {foodItems.length === 0 ? <h1>i am hungry</h1> : null} */}
-
-      {/* {emptyMessage} */}
-
-      {/* logical operator */}
-      {foodItems.length === 0 && <h1>i am now hungry</h1>}
-      <ul className="list-group">
-        {foodItems.map((item) => (
-          <li key={item}>{item}</li> // Implicit return of <li>
-        ))}
-      </ul>
+      <FoodItems />
+      <ErrorMessage />
     </>
   );
 }
@@ -59,3 +43,21 @@ export default App; // function App() {
 // }
 
 // Export App component as default
+
+// let foodItems = ["item1", "item2", "rice", "item 3"];
+// let foodItems = [];
+// if (foodItems.length === 0) {
+//   return <h1>i am still hungry</h1>;
+// }
+// let emptyMessage = foodItems.length === 0 ? <h1>i am hungry</h1> : null;
+
+/* conditional statement to show tital and also condition based programs
+ */
+
+/* {foodItems.length === 0 ? <h1>i am hungry</h1> : null} */
+
+/* {emptyMessage} */
+
+/* logical operator */
+
+/* {foodItems.length === 0 && <h1>i am now hungry</h1>} */

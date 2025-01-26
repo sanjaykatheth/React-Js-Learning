@@ -1,27 +1,36 @@
-// App.js
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Kgbutton from "./sbutton"; // Import Kgbutton component
 import AppName from "./components/AppName";
 import AddTodo from "./components/AddTodo";
-import TodoItem1 from "./components/TodoItem1";
-import TodoItem2 from "./components/TodoItem2";
 import "./App.css";
-import FoodItems from "./components/FoodItems";
-import ErrorMessage from "./components/FoodItems";
+import TodoItems from "./components/TodoItems";
 
 function App() {
-  let foodItems = ["sabji", "item2", "rice", "item 3"];
+  const todoItems = [
+    {
+      name: "Buy Milk",
+      date: "20-11-2023",
+    },
+    {
+      name: "Buy Bread",
+      date: "21-12-2024",
+    },
+  ];
+
   return (
     <>
-      <h1>Food Items</h1>
-      <FoodItems fitems={foodItems} />
-      <ErrorMessage items={foodItems} />
+      <center className="todo-container">
+        <AppName />
+        <AddTodo />
+        <TodoItems todoItems={todoItems} />
+      </center>
     </>
   );
 }
 
-export default App; // function App() {
+export default App;
+
+// function App() {
 //   let foodItems = ["item1", "item2", "rice", "item 3"];
 //   return (
 //     <>
